@@ -1,0 +1,21 @@
+<div *ngIf="mission">
+  <h1>SpaceX Mission Details</h1>
+
+  <mat-card class="card">
+      <mat-card-header>
+        <img mat-card-avatar class="patch" src="{{mission.links.mission_patch}}">
+        <mat-card-title>Mission - {{mission.mission_name}}</mat-card-title>
+        <mat-card-subtitle>Name: {{mission.mission_name}}</mat-card-subtitle>
+        <mat-card-subtitle>Launch year: {{mission.launch_year}}</mat-card-subtitle>
+        <mat-card-title>Rocket</mat-card-title>
+        <mat-card-subtitle>Name: {{mission.rocket.rocket_name}}</mat-card-subtitle>
+        <mat-card-subtitle>Type: {{mission.rocket.rocket_type}}</mat-card-subtitle>
+        <mat-card-title>Launch Site</mat-card-title>
+        <mat-card-subtitle>Name: {{mission.launch_site.site_name_long}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card-title>Launch Details</mat-card-title>
+        <mat-card-subtitle>{{mission.details}}</mat-card-subtitle>
+      </mat-card-content>
+    </mat-card>
+</div>
